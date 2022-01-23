@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Baloo Tamma 2', cursive;
+}
+
+:root {
+    --color1 : #b0bdd4;
+    --color2 : #b8a0b6;
+}
+
+/* Basic style for all element  */
+
+a {
+    text-decoration: none;
+    color: white;
+}
+li {
+    list-style: none;
+}
+img {
+    width: 100%;
+    margin: 20px 0;
+    box-shadow: 200px;
+}
+
+/* Header styling  */
+
+header {
+    display: flex;
+    align-items: center;
+    background-color: var(--color1);
+}
+.navBar{
+    display: flex;
+}
+
+.logo {
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.navBar ul {
+    display: flex;
+    margin-top: 14px;
+}
+
+.navBar ul li {
+    margin: 0 40px;
+    font-size: 22px;
+}
+
+.navBar ul li a:hover {
+    text-decoration: underline;
+}
+
+.mobile {
+    display: none;
+    /* transition-property: visibility;
+    transition-duration: 2s;
+    transition-timing-function: ease;
+    transition-delay: 10s; */
+}
+
+/* Aside section  */
+
+aside {
+    padding: 26px 84px;
+    background-color: var(--color2);
+}
+
+.comments{
+    margin-top: 20px;
+}
+
+.archives {
+    margin-top: 20px;
+}
+
+/* Main section  */
+
+main {
+    background-color: var(--color2);
+}
+
+.blog-post {
+    padding: 20px 40px;
+}
+
+/* Footer section  */
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color1);
+}
+
+
+/* Basic layout design  */
+
+.container{
+    width: 85%;
+    margin: 30px auto;
+    display: grid;
+    grid-template-rows: 100px auto 100px;
+    grid-template-columns: repeat(3,1fr );
+    grid-gap: 10px;
+}
+
+header{
+    /* background-color: red; */
+    /* grid-column-start: 1;
+    grid-column-end: 4; */
+    /* grid-column: 1 /span 3; */
+    grid-column-start: span 3;
+}
+
+aside{
+    /* background-color: orange; */
+    grid-column-start: span 1;
+}
+
+main{
+    /* background-color: gray; */
+    grid-column-start: span 2;
+}
+
+footer{
+    /* background-color: green; */
+    /* grid-column: 1 /span 3; */
+    grid-column-start: span 3;
+}
+
