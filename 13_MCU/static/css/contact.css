@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Code Pro', monospace;
+}
+:root {
+    --color1 : rgb(89, 71, 92);
+}
+h1{
+    text-align: center;
+    margin: 30px 0px;
+}
+.myForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.myInput{
+    width: 70%;
+    padding: 13px;
+    border: 2px solid rgb(216, 141, 141);
+    border-radius: 10px;
+    margin: 10px;
+    font-size: 19px;
+}
+.myInput:focus{
+    background-color: var(--color1);
+    color: white;
+}
+.myBtn{
+    width: 72%;
+    padding: 13px;
+    border: 2px solid rgb(216, 141, 141);
+    border-radius: 10px;
+    margin: 10px;
+    font-size: 19px;
+}
+
+.myBtn:hover{
+    background-color: var(--color1);
+    color: white;
+}
+
+@media (max-width : 768px) {
+    nav {
+        position: static;
+    }
+
+    nav ul {
+        background-color: rgba(150, 136, 136, 0.521);
+        position: absolute;
+        top: -20px;
+        width: 100%;
+        height: 40vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* display: none; */
+        visibility: hidden;
+    }
+    .mobile {
+        display: block;
+        font-size: 30px;
+        position: absolute;
+        right: 2vh;
+        z-index: 3;
+    }
+
+    .formContainer{
+        margin-top: -30px;
+    }
+    
+    .myForm {
+        margin-top: 140px;
+    }
+}

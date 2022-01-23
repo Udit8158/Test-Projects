@@ -1,0 +1,57 @@
+.heroImg {
+    height: 80vh;
+    /* background-image: url(../staticfiles/img/Avengers.jpg); */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../staticfiles/img/Avengers.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.heroImg .text {
+    background-color: rgba(255, 255, 255, 0.336);
+    position: relative;
+    top : 70vh; 
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: large;
+    font-weight: bold;
+}
+
+.movieContainer{
+    /* background-color: red; */
+    display: grid;
+    grid-template-rows: repeat(9,1fr);
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 12px;
+    background-color: rgb(140, 140, 212);
+}
+
+
+.movies {
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Eternals{
+    height: 70%;
+}
+
+footer {
+    background-color: rgb(111, 56, 163);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+    height: 10vh;
+
+}
+
+@media (max-width : 768px) {
+    .movieContainer {
+        grid-template-columns: 1fr;
+    }
+}

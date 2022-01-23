@@ -1,0 +1,26 @@
+html
+    head   
+        title MCU - TimeLine 
+        style
+            include ../static/css/base.css
+            include ../static/css/contact.css
+    body 
+        nav.navBar 
+            ul  
+                li.home
+                    a(href="/") Home 
+                li.about 
+                    a(href="/About") About
+                li.contact 
+                    a(href="/Contact") Contact Us 
+            a(class= "mobile") &#9776;
+            div.formContainer
+                h1 Fill the contact form 
+                form(action="/contact",method="post",class="myForm" onsubmit="return true")
+                    input(type="text",name="name",placeholder="Enter your name",class="myInput") 
+                    input(type="text",name="phone",placeholder="Enter your phone number",class="myInput") 
+                    input(type="text",name="address",placeholder="Enter your address",class="myInput") 
+                    input(type="text",name="thoughts",placeholder="Enter your thoughts",class="myInput") 
+                    button(class="myBtn")
+                        | Submit
+        script(src="../staticfiles/js/contact.js") 

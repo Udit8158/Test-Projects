@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Basic Styling */
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+img {
+    width: 30%;
+    margin: 20px;
+    height: 70%;
+}
+
+/* Navigation Bar  */
+
+.navBar{
+    background-color: black;
+    height: 10vh;
+}
+
+.navBar ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+
+.navBar ul li {
+    width: 140px;
+    text-align: center;
+    height: 6vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navBar ul li:hover {
+    background-color: green;
+}
+
+.active {
+    background-color: green;
+}
+
+.mobile {
+    display: none;
+}
+
+@media (max-width : 768px) {
+    nav {
+        position: static;
+    }
+    nav ul {
+        background-color: rgba(150, 136, 136, 0.521);
+        position: absolute;
+        top: -80px;
+        width: 100%;
+        height: 40vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* display: none; */
+        visibility: hidden;
+    }
+    .mobile {
+        display: block;
+        font-size: 30px;
+        position: absolute;
+        right: 2vh;
+        z-index: 3;
+    }
+}
