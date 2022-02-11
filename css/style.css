@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  overflow: hidden; /* To hide the extra scroll bar in body. */
+}
+.main-container {
+  display: flex;
+  /* width: 100%; */
+}
+
+/* Styling of side pannel */
+.side-pannel {
+  width: 20%;
+  padding: 18px;
+}
+.search-section {
+  width: 100%;
+  margin: 6px 0;
+  margin-bottom: 8px;
+  padding: 8px;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  font-size: medium;
+  height: 8vh;
+  background-color: #c5b0b0;
+}
+.add-note-btn {
+  padding: 8px;
+  text-align: center;
+  background-color: #009578;
+  cursor: pointer;
+  color: white;
+  width: 100%;
+  margin: auto;
+  font-size: 1.4rem;
+  border-radius: 8px;
+  border: none;
+  font-weight: 700;
+}
+/* TODO: optional */
+.small-note-view-container {
+  /* background-color: red; */
+  margin-top: 8px;
+  width: 100%;
+}
+.small-note-view {
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 8px;
+  width: 100%;
+}
+.small-note-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.small-note-body {
+  margin-top: 2px;
+}
+.small-note-btns {
+  margin-top: 21px;
+  display: flex;
+  justify-content: space-around;
+}
+.time-update {
+  margin-top: 8px;
+  margin-left: 60%;
+  font-style: italic;
+}
+
+.add-note-btn:hover {
+  background-color: #00af8c;
+}
+
+.seperator {
+  height: 100vh;
+}
+
+/* Styling of preview container */
+.preview-container {
+  /* background-color: rebeccapurple; */
+  width: 100%;
+}
+
+#mobile {
+  width: 80px;
+  font-size: larger;
+  background-color: transparent;
+  border: none;
+  font-weight: bolder;
+  display: none;
+}
+
+.note-title {
+  width: 100%;
+  outline: none;
+  height: 8vh;
+  border: none;
+  background-color: transparent;
+  font-size: 1.8rem;
+  padding: 8px;
+}
+
+.note-body {
+  width: 100%;
+  min-height: 91vh;
+  border: none;
+  background-color: transparent;
+  resize: none;
+  outline: none;
+  font-size: 1.2rem;
+  padding: 8px;
+}
+
+/* Some special classes  */
+.active-note {
+  background: #eeeeee;
+  border-radius: 7px;
+  font-weight: bold;
+}
+.hide {
+  display: none;
+}
