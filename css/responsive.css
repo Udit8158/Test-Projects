@@ -1,12 +1,16 @@
 @media (max-width: 1200px) {
   .side-pannel {
-    display: none;
+    /* display: none; */
     width: 100%;
   }
+  .preview-container {
+    display: none;
+  }
   .note-title {
-    margin-top: 4px;
+    margin-top: 5vh;
     padding: 20px;
-    font-size: 2.6rem;
+    font-size: 1.6rem;
+    font-weight: bold;
   }
   .note-body {
     margin-top: 10px;
@@ -14,5 +18,32 @@
   }
   #mobile {
     display: inline-block;
+    width: 10%;
+    position: absolute;
+  }
+}
+
+@media (max-width: 400px) {
+  .side-pannel {
+    font-size: 0.8rem;
+  }
+  .small-note-title {
+    font-size: 1rem;
+  }
+  .add-note-btn {
+    font-size: 1rem;
+  }
+  .search-section {
+    font-size: 0.8rem;
+  }
+  .note-title {
+    /* background-color: rebeccapurple; */
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 5vh;
+  }
+  .note-body {
+    /* background-color: red; */
+    font-size: 0.9rem;
   }
 }
