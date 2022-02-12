@@ -1,3 +1,5 @@
+// Controll the hamburger icon and work in responsive part
+
 const mobileHamburger = document.querySelector("#mobile");
 const sidePannel = document.querySelector(".side-pannel");
 // const previewContainere = document.querySelector(".preview-container");

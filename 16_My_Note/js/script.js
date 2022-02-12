@@ -28,8 +28,15 @@ const showNote = () => {
   notesArr.forEach((element, index) => {
     html += `
       <div class="small-note-view" id="${index}">
-            <div class="small-note-title">${element.noteTitle}</div>
-            <div class="small-note-body">${element.noteBody}</div>
+            <div class="small-note-title">${element.noteTitle.slice(
+              // Just show limited words in small
+              0,
+              20
+            )}...</div>
+            <div class="small-note-body">${element.noteBody.slice(
+              0,
+              32
+            )}...</div>
             <div class="small-note-btns">
               <div class="delete-btn" >
                 <i class="fa fa-trash-o" style="font-size: 24px"></i>
@@ -54,7 +61,7 @@ const showNote = () => {
     smallNoteViewContainer.innerHTML = "You donot have notes to show.";
   }
 
-  // TODO: Try to updat time
+  // TODO: Try to update time
   const smallNoteView = Array.from(
     document.querySelectorAll(".small-note-view")
   );

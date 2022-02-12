@@ -6,9 +6,7 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
-body {
-  overflow: hidden; /* To hide the extra scroll bar in body. */
-}
+
 .main-container {
   display: flex;
   /* width: 100%; */
@@ -80,13 +78,15 @@ body {
 }
 
 .seperator {
-  height: 100vh;
+  min-height: 100vh;
+  height: inherit;
 }
 
 /* Styling of preview container */
 .preview-container {
   /* background-color: rebeccapurple; */
   width: 100%;
+  padding: 20px;
 }
 
 #mobile {
