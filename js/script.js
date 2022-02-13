@@ -9,6 +9,8 @@ const previewContainer = document.querySelector(".preview-container");
 const previewNoteTitle = document.querySelector(".note-title");
 const previewNoteBody = document.querySelector(".note-body");
 
+// const infoContainer = document.querySelector(".info");
+
 //Declare important variables
 const notesData = localStorage.getItem("notesData");
 let indexToSave = 0;
@@ -58,7 +60,8 @@ const showNote = () => {
     Array.from(previewContainer.children).forEach((e) => {
       e.classList.add("hide");
     });
-    smallNoteViewContainer.innerHTML = "You donot have notes to show.";
+    smallNoteViewContainer.innerHTML =
+      "You donot have notes to show till now.Click Add Note button to add notes.";
   }
 
   // TODO: Try to update time
@@ -83,8 +86,8 @@ addNoteBtn.addEventListener("click", () => {
     notesArr = JSON.parse(notesData);
   }
   let myObj = {
-    noteTitle: "I am note title",
-    noteBody: "I am note body",
+    noteTitle: "Note Title",
+    noteBody: "Note Body",
   };
   notesArr.push(myObj);
   localStorage.setItem("notesData", JSON.stringify(notesArr));
@@ -93,6 +96,7 @@ addNoteBtn.addEventListener("click", () => {
 });
 
 // Active class adding and removing stuff
+
 Array.from(smallNoteViewContainer.children).forEach((smallNote) => {
   smallNote.addEventListener("click", function () {
     // set preview as the small note
@@ -102,6 +106,8 @@ Array.from(smallNoteViewContainer.children).forEach((smallNote) => {
     // Show the preview container after clicking the small note
     Array.from(previewContainer.children).forEach((e) => {
       e.classList.remove("hide");
+
+      // infoContainer.classList.add("hide"); // Hide the info container
     });
 
     // Method to remove active class from the unclicked small notes

@@ -29,6 +29,7 @@
   font-size: medium;
   height: 8vh;
   background-color: #c5b0b0;
+  /* color: white; */
 }
 .add-note-btn {
   padding: 8px;
@@ -83,6 +84,15 @@
   height: inherit;
 }
 
+.info {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  font-weight: bolder;
+}
+
 /* Styling of preview container */
 .preview-container {
   /* background-color: rebeccapurple; */
@@ -129,4 +139,5 @@
 }
 .hide {
   display: none;
+  /* width: 0; */
 }
