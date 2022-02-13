@@ -45,7 +45,7 @@ const showNote = () => {
                 <i class="fa fa-save" style="font-size: 24px"></i>
               </div>
             </div>
-            <div class="time-update">Time</div>
+            <div class="time-update"></div>
           </div>
       `;
   });

@@ -14,7 +14,8 @@
 
 /* Styling of side pannel */
 .side-pannel {
-  width: 20%;
+  /* width: 20%; */
+  width: 350px;
   padding: 18px;
 }
 .search-section {

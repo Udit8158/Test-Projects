@@ -4,7 +4,7 @@
     font-size: 1.8rem;
   }
   .search-section {
-    font-size: 1.7rem;
+    font-size: 1.4rem;
   }
   .small-note-title {
     font-size: 1.8rem;
@@ -13,6 +13,12 @@
     font-size: 1.5rem;
   }
   .small-note-btns {
+    font-size: 30px;
+  }
+  .note-title {
+    font-size: 2rem;
+  }
+  .note-body {
     font-size: 1.7rem;
   }
 }
@@ -20,7 +26,8 @@
 
 @media (max-width: 1024px) {
   .side-pannel {
-    width: 30%;
+    /* width: 30%; */
+    width: 400px;
   }
   .add-note-btn {
     font-size: 1rem;
@@ -33,11 +40,12 @@
   }
 }
 
-/* Tablet Version  */
+/* Tablet Version   TODO: For various size of tablet */
 
 @media (max-width: 768px) {
   .side-pannel {
-    width: 40%;
+    /* width: 40%; */
+    width: 350px;
   }
   .add-note-btn {
     font-size: 1rem;
