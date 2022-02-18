@@ -4,52 +4,103 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Note App</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/responsive.css" />
-    <script src="./js/script.js" defer></script>
-    <script src="./js/responsive.js" defer></script>
+    <title>U-Spoty One Stop Sollution For Your Best Songs</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
   </head>
   <body>
-    <div class="main-container">
-      <div class="side-pannel">
-        <input
-          class="search-section"
-          type="search"
-          placeholder="Search your notes..."
-        />
-        <button class="add-note-btn">Add Note</button>
-        <div class="small-note-view-container">
-          <div class="small-note-view">
-            <div class="small-note-title">New note</div>
-            <div class="small-note-body">Body of note</div>
-            <div class="small-note-btns">
-              <div class="delete-btn" style="display: inline-block">
-                <i class="fa fa-trash-o" style="font-size: 24px"></i>
-              </div>
-              <div class="save-btn" style="display: inline-block">
-                <i class="fa fa-save" style="font-size: 24px"></i>
-              </div>
-            </div>
-            <div class="time-update">Time</div>
-          </div>
+    <!-- Nav Bar Section  -->
+    <div class="navBar">
+      <img class="logo" src="/importantFiles/img/logo.png" alt="U-Spoty" />
+      <div class="productName">U-Spoty</div>
+      <input
+        type="search"
+        class="searchElement"
+        placeholder="Search Your Songs Here"
+      />
+    </div>
+
+    <!-- Main Songs Container -->
+    <div class="songContainer">
+      <div class="songCards">
+        <div class="cover">
+          <i class="far songItemPlay fa-2x fa-play-circle"></i>
         </div>
+        <span class="songItemName">Song Name </span>
       </div>
-      <hr class="seperator" />
-      <button id="mobile">&#9776</button>
-      <!-- <div class="info">This is info</div> -->
-      <div class="preview-container">
-        <input
-          type="text"
-          class="note-title"
-          placeholder="Enter your title of note"
-        />
-        <textarea class="note-body">I am note body </textarea>
+      <div class="songCards">
+        <div class="cover">
+          <i class="far songItemPlay fa-2x fa-play-circle"></i>
+        </div>
+        <span class="songItemName">Song Name </span>
+      </div>
+      <div class="songCards">
+        <div class="cover">
+          <i class="far songItemPlay fa-2x fa-play-circle"></i>
+        </div>
+        <span class="songItemName">Song Name </span>
+      </div>
+      <div class="songCards">
+        <div class="cover">
+          <i class="far songItemPlay fa-2x fa-play-circle"></i>
+        </div>
+        <span class="songItemName">Song Name </span>
+      </div>
+      <div class="songCards">
+        <div class="cover">
+          <i class="far songItemPlay fa-2x fa-play-circle"></i>
+        </div>
+        <span class="songItemName">Song Name </span>
+      </div>
+      <div class="songCards">
+        <div class="cover">
+          <i class="far songItemPlay fa-2x fa-play-circle"></i>
+        </div>
+        <span class="songItemName">Song Name </span>
+      </div>
+      <div class="songCards">
+        <div class="cover">
+          <i class="far songItemPlay fa-2x fa-play-circle"></i>
+        </div>
+        <span class="songItemName">Song Name </span>
+      </div>
+      <div class="songCards">
+        <div class="cover">
+          <i class="far songItemPlay fa-2x fa-play-circle"></i>
+        </div>
+        <span class="songItemName">Song Name </span>
+      </div>
+      <div class="songCards">
+        <div class="cover">
+          <i class="far songItemPlay fa-2x fa-play-circle"></i>
+        </div>
+        <span class="songItemName">Song Name </span>
       </div>
     </div>
+
+    <!-- Media Controller -->
+    <div class="mediaControll">
+      <!-- Song Info -->
+      <div class="songInfo">
+        <div class="songInfoCover">
+          <img src="/importantFiles/covers/1.jpg" alt="cover of song" />
+        </div>
+        <span class="songName">Song Name</span>
+      </div>
+
+      <!-- media controll -->
+      <div class="controllBtns">
+        <div class="icons">
+          <i class="fas fa-3x fa-step-backward" id="backwardBtn"></i>
+          <i class="far fa-3x fa-play-circle" id="playpauseBtn"></i>
+          <i class="fas fa-3x fa-step-forward" id="forwardBtn"></i>
+        </div>
+        <input type="range" id="myProgressBar" value="0" />
+      </div>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/9a6d08774b.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
