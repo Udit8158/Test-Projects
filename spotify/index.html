@@ -7,6 +7,7 @@
     <title>U-Spoty One Stop Sollution For Your Best Songs</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/responsive.css" />
+    <script defer type="module" src="./js/script.js"></script>
   </head>
   <body>
     <!-- Nav Bar Section  -->
@@ -14,7 +15,7 @@
       <img class="logo" src="/importantFiles/img/logo.png" alt="U-Spoty" />
       <div class="productName">U-Spoty</div>
       <input
-        type="search"
+        type="change"
         class="searchElement"
         placeholder="Search Your Songs Here"
       />
@@ -76,12 +77,18 @@
         </div>
         <span class="songItemName">Song Name </span>
       </div>
+      <div class="songCards">
+        <div class="cover">
+          <i class="far songItemPlay fa-2x fa-play-circle"></i>
+        </div>
+        <span class="songItemName">Song Name </span>
+      </div>
     </div>
 
     <!-- Media Controller -->
     <div class="mediaControll">
       <!-- Song Info -->
-      <div class="songInfo">
+      <div class="songInfo hide">
         <div class="songInfoCover">
           <img src="/importantFiles/covers/1.jpg" alt="cover of song" />
         </div>

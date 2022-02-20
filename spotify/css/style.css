@@ -98,6 +98,8 @@ img {
   color: green;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
+  /* display: none; */
+  /* width: 0; */
 }
 .songItemPlay:hover {
   font-size: 2.3rem;
@@ -150,4 +152,9 @@ img {
   margin-top: 1vh;
   /* font-weight: 0; */
   color: #1db954;
+}
+
+/* Utility class */
+.hide {
+  display: none;
 }

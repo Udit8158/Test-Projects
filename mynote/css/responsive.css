@@ -1,0 +1,125 @@
+/* Extra large screen */
+@media (min-width: 2560px) {
+  .add-note-btn {
+    font-size: 1.8rem;
+  }
+  .search-section {
+    font-size: 1.4rem;
+  }
+  .small-note-title {
+    font-size: 1.8rem;
+  }
+  .small-note-body {
+    font-size: 1.5rem;
+  }
+  .small-note-btns {
+    font-size: 30px;
+  }
+  .note-title {
+    font-size: 2rem;
+  }
+  .note-body {
+    font-size: 1.7rem;
+  }
+}
+/* Small Laptop */
+
+@media (max-width: 1024px) {
+  .side-pannel {
+    /* width: 30%; */
+    width: 400px;
+  }
+  .add-note-btn {
+    font-size: 1rem;
+  }
+  .preview-container {
+    padding: 20px;
+  }
+  .search-section {
+    font-size: 0.8rem;
+  }
+}
+
+/* Tablet Version   TODO: For various size of tablet */
+
+@media (max-width: 768px) {
+  .side-pannel {
+    /* width: 40%; */
+    width: 350px;
+  }
+  .add-note-btn {
+    font-size: 1rem;
+  }
+  .small-note-title {
+    font-size: 1rem;
+  }
+  .small-note-body {
+    font-size: 0.8rem;
+  }
+  .preview-container {
+    padding: 20px;
+  }
+  .note-title {
+    font-size: 1.2rem;
+  }
+  .note-body {
+    font-size: 1rem;
+  }
+  .search-section {
+    font-size: 0.8rem;
+  }
+}
+
+/* Mobile Version */
+
+@media (max-width: 426px) {
+  .side-pannel {
+    /* display: none; */
+    width: 100%;
+  }
+  .preview-container {
+    display: none;
+  }
+  .note-title {
+    margin-top: 5vh;
+    padding: 20px;
+    font-size: 1.6rem;
+    font-weight: bold;
+  }
+  .note-body {
+    margin-top: 10px;
+    padding: 20px;
+  }
+
+  .side-pannel {
+    font-size: 0.8rem;
+  }
+  .small-note-title {
+    font-size: 1rem;
+  }
+  .add-note-btn {
+    font-size: 1rem;
+  }
+  .search-section {
+    font-size: 0.8rem;
+  }
+  .note-title {
+    /* background-color: rebeccapurple; */
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 5vh;
+  }
+  .note-body {
+    /* background-color: red; */
+    font-size: 0.9rem;
+  }
+  .preview-container {
+    padding: 0px;
+  }
+  /* reveal the hamburger icon  */
+  #mobile {
+    display: inline-block;
+    width: 10%;
+    position: absolute;
+  }
+}
