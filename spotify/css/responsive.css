@@ -67,16 +67,21 @@
   }
   .searchElement {
     left: 300px;
-    width: 90%;
+    width: 85%;
     font-size: 1.1rem;
   }
   .songContainer {
+    width: 100%;
+    padding: 35px;
     min-height: 110vh;
     margin: 1vh 0;
     /* background-color: red; */
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 10px;
+  }
+  .songCards {
+    width: 250px;
   }
   /* .mediaControll {
     height: 10vh;
