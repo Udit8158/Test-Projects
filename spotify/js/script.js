@@ -118,16 +118,15 @@ songItemPlay.forEach((element, index) => {
 });
 
 // Searcing functionality
-searchElement.addEventListener("change", () => {
+searchElement.addEventListener("input", () => {
   let searchVal = String(searchElement.value).toLowerCase();
   songCards.forEach((element) => {
     element.classList.remove("hide");
-    let matchingKeyWord = String(element.children[1].innerText)
-      .toLowerCase()
-      .slice(0, 3);
+    let matchingKeyWord = String(element.children[1].innerText).toLowerCase();
+
     if (searchVal == "") {
       element.classList.remove("hide");
-    } else if (matchingKeyWord != searchVal) {
+    } else if (!matchingKeyWord.includes(searchVal)) {
       element.classList.add("hide");
     }
   });
