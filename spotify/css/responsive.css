@@ -34,6 +34,9 @@
   /* .mediaControll {
     height: 10vh;
   } */
+  .songName {
+    display: none;
+  }
 }
 
 /* Mobile Large*/
