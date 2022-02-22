@@ -7,12 +7,11 @@
     font-size: 1rem;
   }
   .songContainer {
-    min-height: 70vh;
+    height: 150vh;
     margin: 1vh 0;
     /* background-color: red; */
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 0px;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
