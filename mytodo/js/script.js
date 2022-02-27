@@ -109,7 +109,7 @@ const addTodos = () => {
     myTodoArr[activeIndex].myTodos.push(todoInputVal);
     localStorage.setItem("myTodos", JSON.stringify(myTodoArr));
 
-    // Refresh
+    // Refresh the page
     document.location.reload();
   });
 };
