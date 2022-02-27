@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Todo - Make your own todo list now</title>
+    <!-- Font Awesome Style Sheet -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="/mytodo/css/style.css" />
+    <link rel="stylesheet" href="/mytodo/css/responsive.css" />
+    <script defer src="/mytodo/js/script.js"></script>
+  </head>
+  <body>
+    <h1 class="main-heading">Stuff I need to do</h1>
+
+    <div class="main-container">
+      <!-- My lists section -->
+      <div class="my-lists-section">
+        <h2 class="list-section-heading">My Lists</h2>
+
+        <ul class="my-lists">
+          <!-- <li class="listItems active">Daily</li> -->
+          <!-- Manupulate by js -->
+        </ul>
+
+        <div class="list-add">
+          <button class="add-list-item-btn">+</button>
+          <input
+            type="text"
+            class="add-list-item-input"
+            placeholder="add new list item"
+          />
+        </div>
+      </div>
+
+      <!-- My todo section -->
+      <div class="my-todo-section hide">
+        <!-- Todo header -->
+        <div class="todo-header">
+          <h2 id="todo-heading">Daily</h2>
+          <span class="task-remaining-element">3 tasks remaining</span>
+        </div>
+
+        <!-- To do list -->
+        <div class="todo-lists">
+          <!-- Task 1 -->
+
+          <!-- Manupulate by Js -->
+
+          <!-- <div class="tasks task-1">
+            <input class="task-checkbox" type="checkbox" id="task1" />
+            <label for="task1">
+              <span class="custom-checkbox"></span>
+              Coding
+            </label>
+            <i class="fa fa-trash"></i>
+            <hr class="complete-task-hr" />
+            <hr class="todo-list-items-hr" />
+          </div> -->
+        </div>
+
+        <!-- To do Input -->
+        <div class="todo-input">
+          <button class="add-todo-list-item">+</button>
+          <input
+            type="text"
+            class="add-todo-list-item-input"
+            placeholder="add task name"
+          />
+        </div>
+        <div class="delete-btns">
+          <button class="clear-completed-task delete-stuff">
+            Clear completed task
+          </button>
+          <button class="delete-list delete-stuff">Delete list</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Font Awesome  Script-->
+    <script
+      src="https://kit.fontawesome.com/9a6d08774b.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

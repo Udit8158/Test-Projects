@@ -1,0 +1,109 @@
+/* Small laptop */
+@media (max-width: 1024px) {
+  .my-todo-section {
+    width: 50%;
+  }
+  .todo-header > h2 {
+    font-size: 2rem;
+  }
+}
+
+/* Tablet */
+
+@media (max-width: 768px) {
+  .my-lists-section {
+    margin-left: 0;
+    width: 30%;
+  }
+  .add-list-item-input {
+    font-size: 1rem;
+  }
+  .add-list-item-input:focus {
+    width: 50%;
+    border-width: 2px;
+    opacity: 0.5;
+  }
+  .my-todo-section {
+    /* margin-right: 50%; */
+    width: 65%;
+  }
+  .todo-header > h2 {
+    font-size: 1.8rem;
+  }
+  .fa-trash {
+    font-size: 1.2rem;
+  }
+  .delete-stuff {
+    font-size: 1rem;
+  }
+}
+
+/* Large Mobile */
+
+@media (max-width: 426px) {
+  .main-heading {
+    font-size: calc(7vw + 1.2rem);
+    margin-bottom: 0;
+  }
+  .main-container {
+    flex-direction: column;
+    margin: 0 0;
+  }
+  .my-lists-section {
+    width: 80%;
+    /* background-color: black; */
+    margin-top: 0;
+  }
+  .list-section-heading {
+    font-size: 1.3rem;
+  }
+  /* My todo section */
+  .my-todo-section {
+    width: 80%;
+    margin-left: 0;
+  }
+
+  .todo-header > h2 {
+    font-size: 1.6rem;
+  }
+  .todo-lists {
+    font-size: 1.2rem;
+  }
+  .add-todo-list-item-input {
+    font-size: 1rem;
+    width: 65%;
+  }
+  .complete-task-hr {
+    bottom: 12px;
+  }
+  .custom-checkbox:hover {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* Mid size mobile */
+@media (max-width: 376px) {
+  .main-heading {
+    font-size: calc(7vw + 1rem);
+    margin-bottom: 0;
+  }
+}
+
+/* Genrel size mobile */
+@media (max-width: 321px) {
+  .main-heading {
+    font-size: calc(7vw + 0.8rem);
+    margin-bottom: 0;
+  }
+  .add-todo-list-item-input {
+    font-size: 0.9rem;
+    width: 60%;
+  }
+  .add-todo-list-item-input:focus {
+    width: 60%;
+  }
+  .fa-trash {
+    font-size: 1rem;
+  }
+}

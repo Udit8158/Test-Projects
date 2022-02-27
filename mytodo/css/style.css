@@ -1,0 +1,296 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@700&display=swap");
+
+/* Basic styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+body {
+  background-color: #398ab9;
+}
+
+ul {
+  list-style-type: circle;
+}
+
+label,
+input,
+button,
+li {
+  cursor: pointer;
+}
+
+/* Main Heding */
+.main-heading {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.253);
+  font-size: calc(7vw + 2rem); /* To adjust with width*/
+  font-weight: 900;
+  letter-spacing: 2px;
+  margin-top: -0.5em;
+  /* word-spacing: 2rem; */
+  font-family: "Kanit", sans-serif;
+}
+
+/* Main container */
+.main-container {
+  /* background: red; */
+  margin-top: 7vh;
+  display: flex;
+  /* justify-content: space-around; */
+  align-items: center;
+}
+
+/* 1.************ My List Section *********/
+.my-lists-section {
+  /* background-color: green; */
+  /* height: 30vh; */
+  /* padding: 0 0 0 52vh; */
+  color: #fff;
+  margin-left: 15%;
+  width: 20%;
+}
+
+.list-section-heading {
+  margin: 2vh 0 0 1vh;
+  font-weight: 600;
+  padding: 1vh;
+}
+
+.my-lists {
+  font-size: 1.2rem;
+  /* margin-bottom: 2vh; */
+  padding: 4vh;
+}
+
+.listItems {
+  margin-bottom: 1.3vh;
+}
+
+.listItems:hover {
+  opacity: 0.7;
+}
+.list-add {
+  /* background-color: red; */
+  width: 100%;
+  padding: 2vh;
+}
+
+.add-list-item-btn {
+  color: white;
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  font-weight: 900;
+  transition: all 0.2s ease-in-out;
+}
+
+.add-list-item-btn:hover {
+  opacity: 0.7;
+}
+
+.add-list-item-input {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  font-size: 1.5rem;
+  margin-left: 1vh;
+  color: #fff;
+  margin-right: 10vh;
+  padding: 1.4vh;
+  border-bottom: 1px solid #fff;
+  width: 50%;
+  transition: all 0.23s ease;
+}
+
+.add-list-item-input:focus {
+  border-width: 2px;
+  width: 60%;
+  opacity: 0.5;
+}
+
+/* 2. ********* My todo section ******** */
+.my-todo-section {
+  background-color: #fff;
+  width: 40%;
+  margin-left: 2vh;
+  /* height: 40vh; */
+}
+
+.todo-header {
+  background-color: rgba(158, 152, 152, 0.26);
+  padding: 4vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todo-header > h2 {
+  font-size: 2.7rem;
+  font-weight: 600;
+}
+
+.todo-lists {
+  padding: 4vh;
+  font-size: 1.6rem;
+}
+
+.tasks {
+  margin-bottom: 1.3vh;
+  cursor: pointer;
+  position: relative;
+}
+
+.fa-trash {
+  position: absolute;
+  right: 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+.fa-trash:hover {
+  opacity: 0.4;
+}
+
+label {
+  opacity: 0.7;
+}
+/* TODO: custom checkbox */
+/* For my custom check box */
+[type="checkbox"] {
+  opacity: 0;
+  position: absolute;
+}
+
+.custom-checkbox {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid black;
+  border-radius: 50%;
+  margin-right: 5px;
+  transition: all 120ms ease-in;
+}
+
+.custom-checkbox:hover {
+  width: 24px;
+  height: 24px;
+  border-color: #398ab9;
+}
+
+/* When click the check box our custom checkbox show the reaction */
+/* This is plus operator is called adjacen sibling combinator */
+
+[type="checkbox"]:checked + label .custom-checkbox {
+  background-color: #398ab9;
+  border-color: #398ab9;
+  box-shadow: inset 0 0 0px 2px #fff;
+}
+
+[type="checkbox"]:checked + label {
+  opacity: 0.4;
+}
+
+.complete-task-hr {
+  position: relative;
+  bottom: 15px;
+  border-color: rgb(187, 183, 183);
+  border-width: 2px;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  margin-left: 30px;
+  width: 0;
+  transition: width 150ms ease-in-out;
+}
+
+/* Very important */
+[type="checkbox"]:checked + label + i + hr {
+  width: 70%;
+}
+
+[type="checkbox"] + label:hover {
+  opacity: 0.4;
+}
+
+.todo-list-items-hr {
+  margin-top: 1vh;
+  border-color: white;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  opacity: 0.6;
+}
+
+.todo-input {
+  /* background-color: red; */
+  width: 100%;
+  padding: 2vh;
+}
+
+.add-todo-list-item {
+  color: #398ab9;
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  font-weight: 900;
+  transition: all 0.2s ease-in-out;
+}
+
+.add-todo-list-item:hover {
+  opacity: 0.7;
+}
+
+.add-todo-list-item-input {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  font-size: 1.5rem;
+  margin-left: 1vh;
+  color: black;
+  margin-right: 10vh;
+  padding: 1.4vh;
+  border-bottom: 1px solid black;
+  transition: all 0.23s ease;
+}
+
+.add-todo-list-item-input:focus {
+  border-width: 2px;
+  width: 70%;
+  opacity: 0.7;
+}
+
+.delete-btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  top: 6vh;
+}
+
+.delete-stuff {
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: 400;
+  transition: all 0.2s ease-in-out;
+  opacity: 0.7;
+}
+
+.delete-stuff:hover {
+  opacity: 0.4;
+}
+
+/* Utility class */
+.active {
+  font-weight: 900;
+  text-decoration: underline;
+}
+.hide {
+  display: none;
+}
