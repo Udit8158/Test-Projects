@@ -17,7 +17,9 @@ const addTodoListItemInput = document.querySelector(
 );
 const addTodoListItem = document.querySelector(".add-todo-list-item");
 
-const deletIcons = document.querySelectorAll(".fa-trash");
+const deleteIcons = document.getElementsByClassName("delete-icons");
+
+const deleteList = document.querySelector(".delete-list");
 
 //Define important variables
 
@@ -61,6 +63,7 @@ const activeListDefiner = () => {
 
       activeIndex = e.id;
       e.classList.add("active");
+      // deleteTodos();
     });
   });
 };
@@ -75,13 +78,15 @@ const rednerTodoSection = () => {
       // Manupulate the dom of todos
       myTodoArr[activeIndex].myTodos.forEach((element, index) => {
         html += `
-          <div class="tasks task-1">
-              <input class="task-checkbox" type="checkbox" id="task1" />
-              <label for="task1">
+          <div class="tasks task-${index + 1}">
+              <input class="task-checkbox" type="checkbox" id="task${
+                index + 1
+              }" />
+              <label for="task${index + 1}">
                 <span class="custom-checkbox"></span>
                ${element}
               </label>
-              <i class="fa fa-trash" id = "${index}"></i>
+              <i class="fa fa-trash delete-icons" id = "${index}"></i>
               <hr class="complete-task-hr" />
               <hr class="todo-list-items-hr" />
             </div>
@@ -94,6 +99,9 @@ const rednerTodoSection = () => {
 
       // Function to delete the individual todos
       deleteTodos();
+
+      // Function to count remaining todos
+      remainingTaskCount();
     });
   });
 };
@@ -114,12 +122,37 @@ const addTodos = () => {
   });
 };
 
+// Function to delete a particular todo.
 const deleteTodos = () => {
-  Array.from(deletIcons).forEach((deletIcon, index) => {
-    deletIcon.addEventListener("click", () => {
-      console.log("clicked");
+  Array.from(deleteIcons).forEach((deleteIcon, index) => {
+    // console.log(deleteIcon);
+    deleteIcon.addEventListener("click", function () {
+      // console.log("clicked", myTodoArr, activeIndex, this);
+      myTodoArr[activeIndex].myTodos.splice(this.id, 1);
+
+      localStorage.setItem("myTodos", JSON.stringify(myTodoArr));
+
+      // Refresh the page
+      document.location.reload();
     });
   });
+};
+
+// Function to count the remaining number of tasks
+const remainingTaskCount = () => {
+  console.log(myTodoArr[activeIndex].myTodos.length);
+
+  taskRemainingElement.innerText = `${myTodoArr[activeIndex].myTodos.length} Task remaining`;
+};
+
+// Function to delete a particular entire task list
+const deleteTaskList = () => {
+  console.log("clicked");
+  myTodoArr.splice(activeIndex, 1);
+
+  localStorage.setItem("myTodos", JSON.stringify(myTodoArr));
+
+  document.location.reload();
 };
 // Event Listners
 
@@ -146,6 +179,9 @@ addListItemBtn.addEventListener("click", () => {
     document.location.reload();
   }, 500);
 });
+
+// Click event listner to delete a particular entire list
+deleteList.addEventListener("click", deleteTaskList);
 
 // localStorage.clear();
 
