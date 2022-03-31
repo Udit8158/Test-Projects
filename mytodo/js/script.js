@@ -21,6 +21,8 @@ const deleteIcons = document.getElementsByClassName("delete-icons");
 
 const deleteList = document.querySelector(".delete-list");
 
+const checkboxes = document.getElementsByClassName("task-checkbox");
+
 //Define important variables
 
 // localStorage.setItem(
@@ -73,7 +75,7 @@ const rednerTodoSection = () => {
   Array.from(myLists.children).forEach((listItem) => {
     listItem.addEventListener("click", () => {
       let html = "";
-      console.log(myTodoArr, activeIndex);
+      // console.log(myTodoArr, activeIndex);
 
       // Manupulate the dom of todos
       myTodoArr[activeIndex].myTodos.forEach((element, index) => {
@@ -82,12 +84,12 @@ const rednerTodoSection = () => {
               <input class="task-checkbox" type="checkbox" id="task${
                 index + 1
               }" />
-              <label for="task${index + 1}">
+              <label class="labels" for="task${index + 1}">
                 <span class="custom-checkbox"></span>
                ${element}
               </label>
               <i class="fa fa-trash delete-icons" id = "${index}"></i>
-              <hr class="complete-task-hr" />
+              <hr class="complete-task-hr hide-hr" id = "${index} />
               <hr class="todo-list-items-hr" />
             </div>
           `;
@@ -97,6 +99,7 @@ const rednerTodoSection = () => {
       // Function to add todos in the todo list and manupulate the dom.
       addTodos();
 
+      // completedTodo();
       // Function to delete the individual todos
       deleteTodos();
 
@@ -138,11 +141,62 @@ const deleteTodos = () => {
   });
 };
 
+// const completedTodo = () => {
+//   checkboxesArr = Array.from(checkboxes);
+
+//   checkboxesArr.forEach((checkBox) => {
+//     checkBox.addEventListener("click", function () {
+//       this.classList.toggle("completed");
+
+//       console.log(
+//         this.nextElementSibling.nextElementSibling.nextElementSibling
+//       );
+//       thisHr = this.nextElementSibling.nextElementSibling.nextElementSibling;
+//       thisHr.classList.remove("hide-hr");
+//     });
+//   });
+// };
+
 // Function to count the remaining number of tasks
 const remainingTaskCount = () => {
-  console.log(myTodoArr[activeIndex].myTodos.length);
+  // Make checkboxes array
+  checkboxesArr = Array.from(checkboxes);
 
-  taskRemainingElement.innerText = `${myTodoArr[activeIndex].myTodos.length} Task remaining`;
+  checkboxesArr.forEach((checkBox) => {
+    checkBox.addEventListener("click", function () {
+      this.classList.toggle("completed");
+
+      completedTodoElement = this;
+      console.log(completedTodoElement);
+
+      completedTodoName =
+        completedTodoElement.nextSibling.nextSibling.innerText;
+
+      if (
+        myTodoArr[activeIndex].completedMyTodos.includes(completedTodoName) ==
+          false &&
+        completedTodoElement.classList.contains("completed")
+      ) {
+        myTodoArr[activeIndex].completedMyTodos.push(completedTodoName);
+      }
+
+      localStorage.setItem("myTodos", JSON.stringify(myTodoArr));
+
+      console.log(
+        myTodoArr[activeIndex].myTodos.length -
+          myTodoArr[activeIndex].completedMyTodos.length
+      );
+
+      console.log(myTodoArr[activeIndex].myTodos.length);
+
+      taskRemainingElement.innerText = `${
+        myTodoArr[activeIndex].myTodos.length -
+        myTodoArr[activeIndex].completedMyTodos.length
+      } Task remaining`;
+      // myTodoArr[activeIndex].completedMyTodos = [];
+      completedTodoElement.style.pointerEvents = "none";
+    });
+  });
 };
 
 // Function to delete a particular entire task list
@@ -158,6 +212,8 @@ const deleteTaskList = () => {
 
 //Click event to generate the list item in the left side
 addListItemBtn.addEventListener("click", () => {
+  // Fundamental logic
+
   if (myTodos == null) {
     myTodoArr = [];
   } else {
@@ -165,11 +221,17 @@ addListItemBtn.addEventListener("click", () => {
   }
   console.log(myTodoArr);
   let addListItemInputVal = addListItemInput.value;
-  myObj = {
+
+  // TODO: Change from this
+
+  // Making main object
+  totalTodosObj = {
     myListItem: addListItemInputVal,
     myTodos: [],
+    completedMyTodos: [],
   };
-  myTodoArr.push(myObj);
+
+  myTodoArr.push(totalTodosObj);
   localStorage.setItem("myTodos", JSON.stringify(myTodoArr));
 
   // Manupulate DOM

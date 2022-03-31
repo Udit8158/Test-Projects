@@ -204,7 +204,7 @@ label {
   border-right: none;
   border-bottom: none;
   margin-left: 30px;
-  width: 0;
+  /* width: 0; */
   transition: width 150ms ease-in-out;
 }
 
@@ -293,4 +293,8 @@ label {
 }
 .hide {
   display: none;
+}
+
+.hide-hr {
+  width: 0;
 }
