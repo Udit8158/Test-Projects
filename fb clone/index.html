@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>facebook - login or sign up</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.8304a629.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAABNxJREFUWEeNV01sFVUU/s7MPLC09LVUMMrTV0t0QRsT/2J0Y+iGyI7En8DCRVuBDbAQJTFxYXRjoolRF628siFqIkYXqEk1oSYkxAQKG5CkJQ01BQP0vfbZwmv73swx9869M3fmzbzhbto3c+ec73znO+eeS4gvAsDmQ/EA6Bsr5z3CHrZpEOw9S6BeAF1q5xKDb4Csy+ThrOXxb7MHt1RDK3Gj4W/feou1/Zu7TzsWHSemfSBqS95KIHCIm7nGhO8bnvfpzQNbp1vZTwVQOO212f9VPybGEYBzmUShiToAVGfCl+7mrg/n36Qa5B6xQooNAKGBwuidp2zb+ZkI/dqxfpvkRuxJIlm7YsZV123snT+0bSa+0QdgfF0cu/scbHuCgIez0vPA7wlgxgK7jd3/HHzkkslCJAUicstxzlvKeSQq8q2Y67F2C8MDG7Hr8RwKmy3YRCiveZiuuJi608AXU6sRwhlYcBuNVyQTagUACj9wm11dvCBpV57jPgNABLy6PYevBzvQ4SgGDWQCZmXVwwvfVlXaQ/AyHfnuF+ffopqQQgCgOL74GTG/25zNZqJFtBN7O7HJocCCcLruMjbYoiIgGXj9zHL0YxUBE30+N7zlmBCjBCBKLWc5Vwici5Ick5b6+dHL7Xh75wYpZhfAJ3/dx48z61ipM9ocYGePg56HCL/P1aOtICgAqte9xsDNA9umJYBiqTxOoKHW0Ydg/nyjE8VOS3J/enoN75+730RTYrUYDxl8cm6kZ5j6Rit5z+Z/05uMXya60QgbM0PdsJWx987dk9HHyzWzQphrlkePUu+Jyj4QvpNumoUuc/Tak7oPMSwifLWrPVDeyauruHS7rrMp/TY84I858cxcCZx42E/F0uIJIh6J7Q6+FJFeH+qOaVzwEe1rZj0vrzOeObXktxgdVIJ/BkpULJUvEuj5KFgCsd/bmwAwwMqb2VjJQGQCaJUKBk9Rb6myAKAnLYcigqH+jUFDsQF88NKmwO5P19fwd1nUQthZ1hvAqWtrGTKQlJQFgIYINHV3jDqfkS6Zc/Hq8OQKfpk1yi1LjiZtgJsAILojzkyQEkV5BEDaSRWSE5eaBGCkIMOC0oQoQ784H5QB325ClZXpiVL5oiVE2LJzKANK1aIqtOgSU5AaR/hC/OcJEcoyBI9ENZDORLQqGIcn76VoIPtUYVAp0ogin4hzRpRcTJ0CgEiBVsqRyRWcUSLUsLMTqYwy9tOOsUretcJWHP9Y/jYeJonw11m/68X3tqxD3YrFpuJ4eZxYHEbNKw5IDB2iDPVKL8PWSQ0OI7HNP47tKwByqZlTSEwNiKhFCqJ9wCjjdDHW61wfuPWOOo4Fd8WSHkh0gZnZDy3FW3MmAwl58QeS7mPak+RKjGRWdfGCZaE/VF5zCHEGjhoizOi9fjtPG8kkCDGOO875pIlYQ8nSQDNkPUvIiSJ9KNXo/bHcmSBw01iujXcYSll1/fM/shLqkQkLqLu75w5tVWO5nwCtGON7QmH0dnAxMSOKtNIkgaWM0ZGLSQLW6PmlDMsxfXkp9WrWOt8BBcbVzKoFbU29Fn8SGIhWgX85tY4To8XlNHY3My6nt9TlNN5RdQAhgIz+2TdWyXsW9nhEg4TY9ZywxOzdAOzLxHzW8qCu577RVqb/B9O8UZ85ckDMAAAAAElFTkSuQmCC" />
+    <link rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAm5JREFUOE9dU01rU1EUnPPy0ZemKVilYlGTuqjUhZhkpxTBTbsQ3AkuujIp2djY+gP6D5TioiVJKbgU7L4gFRHcaXEh0kakH+nGlnzUxnyQ3KPn3vsSMYuQlzdn7pyZuYT/PtHCcZyUbw4O3QMhBgaIsMeKt5g6uYPU6DZ7MwSQ/Javy88PQzQcXnaAlB4hgRHAFi5gJu6CC+r0LFtajDYEowlk2B8Z3CSHpjRe/mUg6ANmYkGMDzs4aTDeH3VQOusCSn3o/Po9XXp2taEJomvlHDHSWpkeJgz4GK/vD+HmBT8UExwClj7W8epbWwtk5vx+amSOooWfcULgk+iTUzUHER5cC+DF3TCWvzTw8nMTQ0FDUmn2QMzcSVIsX16Bg4yeZOC8SxhxCbM3XMxODiDz9gw/al0Rhe8VcZS1QoPnVYoVKjsETMgL2X8h4WI+HrLvtVowGG0FTK5XPZF2W9ql8bVKi5mD1jdcCju4GAYeTYTw8HoA2Xd1HNYVoIDt464NSCj1sm1R0AI42PfPRLeQdDF/K4TpN6coVs0K/eO9B0OwQ8QTghBeAoGJzSpCsFHDruzumeRlbBqwS7F8ZQXEGZ2fLQ8xI5twkY17BMqma4tlPYSiVYqu2RjBpA22VXiacPEkHsLMximKFaX1/9MxkwE6SVOkQjnngNImCbNf34MailUhMCvaosh0fj99bq5X5UBkcBNEU6YOhDtjPtwe82P9awsnTTbxe5eIpcqN6aNFqbLdR+6DLxJeJqKUboqH7rmvPZKqFLq1era0eKVhk7MIS+RdZ5LrzIgZ93iPGVvK6eQOHo9u9wz/e8gfCSMgpRG44QgAAAAASUVORK5CYII=" />
+    <link rel="manifest" href="data:application/manifest+json;base64,eyJuYW1lIjoiIiwic2hvcnRfbmFtZSI6IiIsImljb25zIjpbeyJzcmMiOiIvYW5kcm9pZC1jaHJvbWUtMTkyeDE5Mi5wbmciLCJzaXplcyI6IjE5MngxOTIiLCJ0eXBlIjoiaW1hZ2UvcG5nIn0seyJzcmMiOiIvYW5kcm9pZC1jaHJvbWUtNTEyeDUxMi5wbmciLCJzaXplcyI6IjUxMng1MTIiLCJ0eXBlIjoiaW1hZ2UvcG5nIn1dLCJ0aGVtZV9jb2xvciI6IiNmZmZmZmYiLCJiYWNrZ3JvdW5kX2NvbG9yIjoiI2ZmZmZmZiIsImRpc3BsYXkiOiJzdGFuZGFsb25lIn0=" />
+    <link rel="stylesheet" href="/assets/index.fa65bf33.css">
+  </head>
+  <body>
+    <div
+      class="main-container flex flex-col md:flex-row justify-center items-center h-screen bg-gray-100"
+    >
+      <div
+        class="first-box mb-12 w-full md:w-1/2 md:mr-10 flex flex-col justify-center items-center"
+      >
+        <img src="/assets/fblogo.742a0434.png" alt="facebook" class="logo w-56 2xl:w-96" />
+        <p
+          class="text-sm p-2 font-medium mt-4 lg:text-2xl lg:pl-10 2xl:text-3xl 2xl:pl-16"
+        >
+          Facebook helps you connect and share with people in your life
+        </p>
+      </div>
+      <div
+        class="second-box flex flex-col w-full md:mr-6 justify-center items-center"
+      >
+        <div
+          class="rightside-main-container bg-white rounded-md p-4 shadow-xl flex flex-col justify-center items-center w-full md:w-96 2xl:w-1/2 2xl:text-2xl"
+        >
+          <input
+            type="email"
+            placeholder="Email address or phone number"
+            class="w-full h-16 text-lg p-2 border-2 rounded-md outline-none mt-1 focus:border-blue-400 2xl:text-2xl"
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            class="w-full h-16 text-lg p-2 border-2 rounded-md outline-none mt-4 focus:border-blue-400 2xl:text-2xl"
+          />
+          <button
+            class="login-btn bg-blue-500 w-full h-12 mt-4 p-2 rounded-md text-white text-xl font-bold hover:bg-blue-600 2xl:text-2xl"
+          >
+            Log In
+          </button>
+          <p class="text-center text-blue-700 mt-2 hover:underline">
+            Forgotten password?
+          </p>
+          <hr class="w-4/5 mt-4" />
+          <button
+            class="create-account-btn bg-green-500 w-60 h-12 mt-6 p-2 rounded-md text-white text-lg font-medium align-middle hover:bg-green-600 2xl:text-2xl"
+          >
+            Create New Account
+          </button>
+        </div>
+        <p class="text-sm mt-6 2xl:text-2xl">
+          <span class="font-bold hover:underline">Create a Page</span> for a
+          celebrity, brand or business.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
