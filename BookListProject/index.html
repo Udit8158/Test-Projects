@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My Book List</title>
+    <!-- Bootstrap style sheet -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <!-- Alert -->
+      <div class="alert alert-success mb-3 d-none" role="alert">
+        A simple success alert—check it out!
+      </div>
+      <h1 class="text-center">
+        <i class="fa-solid fa-book-open me-3"></i>My Book List
+      </h1>
+      <!-- Form -->
+      <div class="mb-3">
+        <label for="formGroupExampleInput" class="form-label">Book Name</label>
+        <input
+          type="text"
+          class="form-control bookName"
+          id="formGroupExampleInput"
+          placeholder="Enter book name"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="formGroupExampleInput2" class="form-label"
+          >Author Name</label
+        >
+        <input
+          type="text"
+          class="form-control authorName"
+          id="formGroupExampleInput2"
+          placeholder="Enter author name"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="formGroupExampleInput2" class="form-label"
+          >Book Price</label
+        >
+        <input
+          type="text"
+          class="form-control bookPrice"
+          id="formGroupExampleInput2"
+          placeholder="Enter book price "
+        />
+      </div>
+      <!-- submit btn -->
+      <div class="mb-3">
+        <div class="d-grid gap-2 mb-3 mt-3">
+          <button class="btn btn-primary submitBtn" type="button">
+            Submit
+          </button>
+        </div>
+      </div>
+
+      <!-- Table  -->
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Book Number</th>
+            <th scope="col">Book Name</th>
+            <th scope="col">Author Name</th>
+            <th scope="col">Book Price</th>
+          </tr>
+        </thead>
+        <tbody class="tableBody">
+          <!-- We need to generate this with js -->
+
+          <!-- <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+            <td><i class="fa-solid fa-xmark"></i></td>
+          </tr> -->
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Bootstrap script -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Font awesome script -->
+    <script
+      src="https://kit.fontawesome.com/e9b813e27a.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- My own script -->
+    <script src="./js/app.js"></script>
+  </body>
+</html>
