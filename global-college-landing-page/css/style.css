@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+a,
+a:link,
+a:visited {
+  color: #fffafa;
+  text-decoration: none;
+}
+
+/* Landing page section */
+.landing-page {
+  height: 100vh;
+  /* Set background image with these gradient to fade the image with dark shade */
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    url("../img/banner.png");
+  background-position: center;
+  background-size: cover;
+}
+
+/* Navbar */
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  /* padding: 40px; */
+  padding: 10px 20px 0 20px;
+}
+
+.logo-container img {
+  width: 200px;
+}
+
+.nav-links {
+  display: flex;
+  text-decoration: none;
+  color: white;
+  align-items: center;
+  gap: 2rem;
+  /* For smooth transition */
+  transition: 1s;
+}
+
+.nav-links a {
+  transition: 0.3s;
+}
+.nav-links a:hover {
+  text-decoration: underline;
+  text-decoration-color: #f55116;
+  font-size: 1.2rem;
+}
+
+.three-bar-icon {
+  color: white;
+  font-size: 2rem;
+  display: none;
+  cursor: pointer;
+}
+
+.cancel-btn {
+  width: 40px;
+  color: white;
+  font-size: 2rem;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  display: none;
+  cursor: pointer;
+}
+
+/* Hero container */
+.hero-text-container {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin-top: 200px;
+  gap: 2rem;
+}
+
+.hero-heading {
+  font-size: 2.5rem;
+  font-weight: bolder;
+}
+
+.hero-btn {
+  width: 200px;
+  font-size: 1rem;
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 6px;
+  transition: 0.5s;
+}
+
+.hero-btn:hover {
+  background-color: #f55116;
+  border: 2px solid #f55116;
+}

@@ -1,0 +1,31 @@
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+  .nav-links {
+    position: absolute;
+    right: -300px;
+    flex-direction: column;
+    /* right: -120px; */
+    width: 300px;
+    height: 100vh;
+    top: 0;
+    padding: 40px;
+    background-color: #f55116;
+    gap: 40px;
+    padding-top: 130px;
+  }
+  .three-bar-icon,
+  .cancel-btn {
+    display: block;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-text-container {
+    width: 100%;
+  }
+  .hero-heading {
+    font-size: 1.8rem;
+  }
+}
